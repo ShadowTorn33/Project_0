@@ -1,7 +1,12 @@
 body {
+    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSvn1LlASApBI0AMNFQqMn849yhLj2QAagbUOi1ExpPtcjvvg-7_9UdCypwS2hLpuohdSs&usqp=CAU');
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-position: center;
     display: grid;
     align-items: center;
     justify-content: center;
+    height: 100vh;
 }
 
 h1 {
@@ -13,4 +18,9 @@ h1 {
 #lightbulb {
     height: 10vh;
     width: 10vh;
+}
+
+#dragon {
+    height: 300px;
+    width: auto;
 }

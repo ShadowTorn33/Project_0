@@ -1,10 +1,13 @@
-const restBtn=document.querySelector('.sleepiness')
+const restBtn=document.querySelector('#lightbulb')
 const feedPetBtn=document.querySelector('.hunger')
-const playBtn=document.querySelector('.boredom')
+const playBtn=document.querySelector('.play-with-me')
+
 const age=document.querySelector('#age')
 const hungerLevel=document.querySelector('#hunger')
 const boredomLevel=document.querySelector('#boredom')
 const sleepinessLevel=document.querySelector('#sleepiness')
+
+// const nameChange = document.querySelector()
 
 const myPet = {
     hunger: 0,
@@ -16,8 +19,6 @@ const myPet = {
 
 const timer = setInterval(changeAge,1000)
  
-
-
 function changeAge() {
     myPet.petsAge += 1
     myPet.hunger += 1
@@ -33,7 +34,31 @@ function changeAge() {
     }
 }
 
-restBtn
+const petRestTime = () => {
+    myPet.sleepiness -= 1
+    sleepinessLevel.textContent = myPet.sleepiness
+}
+
+const petFeedTime = () => {
+    myPet.hunger -= 1
+    hungerLevel.textContent = myPet.hunger 
+}
+const petPlayTime = () => {
+    myPet.boredom -= 1
+    boredomLevel.textContent = myPet.boredom
+      
+}
+ 
+ 
+
+restBtn.addEventListener('click', petRestTime)
+feedPetBtn.addEventListener('click', petFeedTime)
+playBtn.addEventListener('click', petPlayTime)
+
+
+
+
+
 
 
 
