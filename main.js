@@ -14,6 +14,7 @@ const myPet = {
     petsAge: 0
 }
 
+const timer = setInterval(changeAge,1000)
  
 
 
@@ -26,10 +27,13 @@ function changeAge() {
     hungerLevel.textContent = myPet.hunger
     sleepinessLevel.textContent = myPet.sleepiness
     boredomLevel.textContent = myPet.boredom
+    if(myPet.hunger === 10 || myPet.sleepiness === 10 || myPet.boredom === 10) {
+        clearInterval(timer)
+        return alert("You killed the motha fker")
+    }
 }
 
-setInterval(changeAge,1000)
-
+restBtn
 
 
 
