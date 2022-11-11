@@ -19,7 +19,13 @@ const myPet = {
 
 function changeAge() {
     myPet.petsAge += 1
+    myPet.hunger += 1
+    myPet.sleepiness += 1
+    myPet.boredom += 1
     age.textContent = myPet.petsAge
+    hungerLevel.textContent = myPet.hunger
+    sleepinessLevel.textContent = myPet.sleepiness
+    boredomLevel.textContent = myPet.boredom
 }
 
 setInterval(changeAge,1000)
