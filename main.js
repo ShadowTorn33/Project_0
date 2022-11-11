@@ -35,18 +35,23 @@ function changeAge() {
 }
 
 const petRestTime = () => {
+    if(myPet.boredom > 0){
     myPet.sleepiness -= 1
     sleepinessLevel.textContent = myPet.sleepiness
+    }
 }
 
 const petFeedTime = () => {
+    if(myPet.hunger > 0) {
     myPet.hunger -= 1
     hungerLevel.textContent = myPet.hunger 
+    }
 }
 const petPlayTime = () => {
+    if(myPet.boredom > 0) {
     myPet.boredom -= 1
     boredomLevel.textContent = myPet.boredom
-      
+    }
 }
  
  
