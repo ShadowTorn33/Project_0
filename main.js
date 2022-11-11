@@ -7,7 +7,7 @@ const hungerLevel=document.querySelector('#hunger')
 const boredomLevel=document.querySelector('#boredom')
 const sleepinessLevel=document.querySelector('#sleepiness')
 
-// const nameChange = document.querySelector()
+const form = document.querySelector('#form')
 
 const myPet = {
     hunger: 0,
@@ -17,7 +17,7 @@ const myPet = {
     petsAge: 0
 }
 
-const timer = setInterval(changeAge,1000)
+const timer = setInterval(changeAge,1000)//Its seet to 1 second but this is for your testing purpose. Can always be changed later
  
 function changeAge() {
     myPet.petsAge += 1
@@ -54,7 +54,20 @@ const petPlayTime = () => {
     }
 }
  
- 
+form.addEventListener('submit', (event) => {
+    event.preventDefault()
+    const h1 = document.createElement('h1');
+    const input = document.querySelector('#input-name')
+    h1.textContent=input.value;
+    document.querySelector('div').appendChild(h1)
+    event.target.reset()
+})
+
+
+
+
+
+
 
 restBtn.addEventListener('click', petRestTime)
 feedPetBtn.addEventListener('click', petFeedTime)

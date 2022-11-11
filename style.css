@@ -9,10 +9,34 @@ body {
     height: 100vh;
 }
 
+
 h1 {
     display: flex;
-    text-align: center;
     align-items: center;
+    font-size: 60px;
+    text-align: center;
+    font-family: monospace;
+    text-shadow: 4px 4px 0 red, 8px 8px 4px purple;
+}
+
+
+button {
+    background-color:burlywood;
+}
+
+input {
+    background-color:lemonchiffon;
+    text-align: center;
+}
+
+form {
+    text-align: center;
+}
+
+
+#dragon {
+    height: 300px;
+    width: auto;
 }
 
 #lightbulb {
@@ -20,7 +44,7 @@ h1 {
     width: 10vh;
 }
 
-#dragon {
-    height: 300px;
-    width: auto;
+div.petnameclass {
+    text-align: right;
+    
 }
