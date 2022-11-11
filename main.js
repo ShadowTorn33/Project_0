@@ -1,7 +1,27 @@
-// Create buttons that link to html elements
+const restBtn=document.querySelector('.sleepiness')
+const feedPetBtn=document.querySelector('.hunger')
+const playBtn=document.querySelector('.boredom')
+const age=document.querySelector('#age')
 
-//Create a pet 
-    // - const = petDragon
-//Create a timer 
+const myPet = {
+    hunger: 0,
+    boredom: 0,
+    sleepiness: 0,
+    lights: true,
+    petsAge: 0
+}
 
-//Create a function
+ 
+
+
+function changeAge() {
+    myPet.petsAge += 1
+    age.textContent = myPet.petsAge
+}
+
+setInterval(changeAge,1000)
+
+
+
+
+

@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tamagachi</title>
     <link rel="stylesheet" href="style.css">
-    <script src="main.js"></script>
+    <script src="main.js" defer></script>
 </head>
 <header>
     
@@ -14,24 +14,23 @@
 <body>
     <h1>Tamagachi Pet</h1>
     <input type="text" name="Pets Name" placeholder="Pets Name">
-    <h2></h2>
+    <h2 id="age"></h2>
     <div class="lights-play">
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmyvhn1IvIqrUE-vdB5X3ze4-DEwA9E9s1XQ&usqp=CAU" id="lightbulb" alt="">
-        <button>Play with me</button>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmyvhn1IvIqrUE-vdB5X3ze4-DEwA9E9s1XQ&usqp=CAU" id="lightbulb" alt=""> <br>
+        <h3 id="sleepiness"></h3>
+        <label for="sleepiness">Sleepiness</label>
+        
     </div>
     <div class="pet-img">
         <img src="https://i.pinimg.com/474x/44/af/e6/44afe68f7a63fc81154ca6641727aa6c.jpg" alt="">
     </div>
     <div class="input-fields">
         <label for="hunger">Hunger Level</label> <br>
-        <input type="range" id="hunger" value="" min="0" max="10">
-        <button>Submit</button> <br> <br>
-        <label for="sleepiness">Sleepiness</label> <br>
-        <input type="range" id="sleepiness" value="" min="0" max="10"> 
-        <button>Submit</button> <br> <br>
+        <h3 id="hunger"></h3>
+        <button class="hunger">Feed Pet</button> <br> <br>
         <label for="boredom">Boredom Level</label> <br>
-        <input type="range" id="boredom" value="" min="0" max="10">
-        <button>Submit</button> <br> <br>
+        <h3 id="boredom"></h3>
+        <button class="play-with-me">Play With Me</button> <br> <br>
     </div>
 </body>
 </html>
