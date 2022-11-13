@@ -44,6 +44,8 @@ form {
     text-align: center;
 }
 
+
+
 .text {
     display: flex;
     flex-direction: column;
@@ -60,11 +62,35 @@ form {
     width: 10vh;
 }
 
-div.petnameclass {
-    text-align: right;
+.sleep-label {
+    display: flex;
+}
+
+.hunger-label {
+    display: flex;
     
 }
 
-div.input-fields {
-    display: inline-flex
+.boredom-label {
+    display: flex;
+    
+}
+
+.lights-out {
+    display: flex;
+    
+}
+
+.feed-pet-button {
+    display: flex;
+}
+
+.play-with-me {
+    display: flex;
+    
+}
+
+.input-fields {
+    display: flex;
+    flex-direction: row;
 }

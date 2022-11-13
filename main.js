@@ -1,6 +1,7 @@
 const restBtn=document.querySelector('#lightbulb')
 const feedPetBtn=document.querySelector('.hunger')
 const playBtn=document.querySelector('.play-with-me')
+const startGame=document.querySelector('#start-game')
 
 const age=document.querySelector('#age')
 const hungerLevel=document.querySelector('#hunger')
@@ -17,10 +18,11 @@ const myPet = {
     petsAge: 0
 }
 
-const timer = setInterval(changeAge,1000)//Its seet to 1 second but this is for your testing purpose. Can always be changed later
- 
+const timer = setInterval(changeAge,5000)
+    
+
 function changeAge() {
-    myPet.petsAge += 1
+    myPet.petsAge += 2
     myPet.hunger += 1
     myPet.sleepiness += 1
     myPet.boredom += 1
@@ -28,12 +30,12 @@ function changeAge() {
     hungerLevel.textContent = myPet.hunger
     sleepinessLevel.textContent = myPet.sleepiness
     boredomLevel.textContent = myPet.boredom
-    if(myPet.hunger === 10 || myPet.sleepiness === 10 || myPet.boredom === 10) {
-        clearInterval(timer)
-        return alert("You killed the motha fker")
+        if(myPet.hunger === 10 || myPet.sleepiness === 10 || myPet.boredom === 10) {
+            clearInterval(timer)
+            return alert("You killed the motha fker")
+        }
     }
-}
-
+    
 const petRestTime = () => {
     if(myPet.boredom > 0){
     myPet.sleepiness -= 1
@@ -68,7 +70,7 @@ form.addEventListener('submit', (event) => {
 
 
 
-
+startGame.addEventListener('click',changeAge)
 restBtn.addEventListener('click', petRestTime)
 feedPetBtn.addEventListener('click', petFeedTime)
 playBtn.addEventListener('click', petPlayTime)
